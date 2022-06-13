@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2>Functii:</h2>
+
+<!-- The Modal 1 -->
+<div id="myModal_1" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>int insert(char mess[256]) {
+      int value;
+      cout&#60;&#60;mess;
+      cin&#62;&#62;value;
+      return value;
+}
+void show( char mess[256] , int x){
+    cout&#60;&#60;mess&#60;&#60;x&#60;&#60;endl;  
+}
+int calc(int a, int b, int c){ 
+  return a + b - c  ;
+}
+int main(){ 
+  srand( time(0) );
+
+  int a = insert(" Enter a = ");
+  int b = insert(" Enter b = ");
+  int c = insert(" Enter c = ");
+  show(" a = ",a);
+  show(" b = ",b);
+  show(" c = ",c);
+       //int R = calc(a,b,c);
+       //show(" R = a+b-c = ",R);
+  show(" a+b-c = ", calc(a,b,c) );
+return 0;
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 2 -->
+<div id="myModal_2" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>int insert(char mess[256]) {
+      int value;
+      cout&#60;&#60;mess;
+      cin&#62;&#62;value;
+      return value;
+}
+void show( char mess[256] , int x){
+    cout&#60;&#60;mess&#60;&#60;x&#60;&#60;endl;  
+}
+int calc(int a, int b, int c){ 
+  return a + b - c  ;
+}
+int main(){ 
+  srand( time(0) );
+  int n = insert("Enter n="); 
+  for(int i=0, a,b,c, R ; i &#60; n; i++ ) {
+    a = rand()%10;
+    b = rand()%10;
+    c = rand()%10;
+    show("\n i = ", i+1 );
+    show(" a = ", a );
+    show(" b = ", b );
+    show(" c = ", c );
+    show(" R = a+b-c = ",  calc(a,b,c));
+   }
+return 0;
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 3 -->
+<div id="myModal_3" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>int suma(int val1, int val2){
+    return val1 + val2 ;  
+}
+int main(){ 
+  srand( time(0) );
+  int n = insert("Enter n="); 
+int s=0;
+  for(int i=0, a,b,c, R ; i &#60; n; i++ ){
+    a = rand()%10;
+    b = rand()%10;
+    c = rand()%10;
+    show("\n i = ", i+1 );
+    show(" a = ", a );
+    show(" b = ", b );
+    show(" c = ", c );
+    int R = calc(a,b,c);
+    show(" R = a+b-c = ",R);
+    s = suma( s , R );
+   }
+   show(" Suma = ", s );
+return 0;
+}
+
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 4 -->
+<div id="myModal_4" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>int suma(int val1, int val2){
+    return val1 + val2 ;  
+}
+bool paritate(int val)  {
+  return val%2==0 ? true:false;
+}
+int main(){ 
+  srand( time(0) );
+  int n = insert("Enter n="); 
+  int sp=0, si=0;
+  for(int i=0, a,b,c, R ; i &#60; n; i++ ){
+    a = rand()%10;
+    b = rand()%10;
+    c = rand()%10;
+    int R = calc(a,b,c);
+    if( paritate(R) ) sp = suma( sp , R ); 
+      else si = suma( si , R );  
+   }
+   show(" Suma   par = ", sp );
+   show(" Suma impar = ", si );
+return 0;
+}
+</pre>
+</p>
+  </div>
+</div>
+
+
+<!-- The Modal 5 -->
+<div id="myModal_5" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>int suma(int val1, int val2){
+    return val1 + val2 ;  
+}
+bool paritate(int val)  {
+  return val%2==0 ? true:false;
+}
+int main(){ 
+  srand( time(0) );
+  int n = insert("Enter n="); 
+  int cRi=0;
+  for(int i=0, a,b,c, R ; i &#60; n; i++ ){
+    a = rand()%10;
+    b = rand()%10;
+    c = rand()%10;
+    int R = calc(a,b,c);
+    if( !paritate(R) ) cRi = suma( cRi , 1 );
+   }
+   show(" Contor R impar = ",cRi );
+return 0;
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 6 -->
+<div id="myModal_6" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>bool interval(int x,int v1, int v2){
+return x &#62;= v1 && x &#60; v2 ? true:false;
+}
+int main(){ 
+  srand( time(0) );
+  int n = insert("Enter n="); 
+  int cR = 0;
+  for(int i=0, a,b,c, R; i&#60;n; i++){
+    a = rand()%10;
+    b = rand()%10;
+    c = rand()%10;
+    int R = calc(a,b,c);
+    if( interval(R,-10,10) ) 
+         cR = suma( cR  , 1 );
+   }
+   show("Contor R -10...10 = ", cR);
+return 0;
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 7 -->
+<div id="myModal_7" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>bool interval(int x,int v1, int v2){
+return x &#62;= v1 && x &#60; v2 ? true:false;
+}
+bool paritate(int val)  {
+  return val%2==0 ? true:false;
+}
+int main(){ 
+  srand( time(0) );
+  int n = insert("Enter n="); 
+  int SS = 0;
+  for(int i=0, a,b,c, R; i&#60;n; i++){
+    a = rand()%10;
+    b = rand()%10;
+    c = rand()%10;
+    int R = calc(a,b,c);
+    if(   !paritate(a) && interval(a,2,6) 
+       &&  paritate(b) && interval(b,3,8) 
+       && !paritate(c) && interval(c,0,3) ) SS = suma( SS , R );
+ }
+  show("suma R, a impar 2...6, b par 3..8, c impar 0...3 = ", SS  );
+return 0;}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 8 -->
+<div id="myModal_8" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>void insertVECTOR(int v[], int n) {
+  for( int i=0; i&#60;n; i++) { 
+  // cout&#60;&#60;" v["&#60;&#60;i&#60;&#60;"] = ";
+  // cin&#62;&#62;v[i];
+  // v[i] = insert(" Enter value = ");
+  v[i] = rand()%10;
+ }
+}
+
+void showVECTOR(int v[100], int n) {
+  for( int i=0; i&#60;n; i++) { 
+    //cout&#60;&#60;setw(3)&#60;&#60;v[i];
+    show(" Elemnet vector = ", v[i] );
+  }
+  cout&#60;&#60;endl;
+}
+int main(){ 
+  srand( time(0) );
+  int v[100], n;
+  n=insert("Enter n=");
+  insertVECTOR(v,n); 
+  showVECTOR(v,n);
+return 0;
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 9 -->
+<div id="myModal_9" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>int sumaVECTOR( int v[], int n) {
+  int sum =0 ;
+  for(int i=0; i&#60;n; i++) sum+=v[i];
+  return sum;
+}
+int main(){ 
+  srand( time(0) );
+  int v[100], n;
+  n=insert("Enter n=");
+  insertVECTOR(v,n); 
+  showVECTOR(v,n);
+  int s = sumaVECTOR(v,n);
+  show("suma elem. vector = ", s );
+  return 0;
+}
+</pre>
+</p>
+  </div>
+</div> 
+
+<!-- The Modal 10 -->
+<div id="myModal_10" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>int suma_p_imVECTOR( int v[], int n, bool x) {
+  int sum = 0 ;
+  for(int i=0; i&#60;n; i++) { 
+    // x = true impar x = false par
+    if( x ) {
+      if( v[i]%2 != 0 ) sum+=v[i];
+    }
+    else {
+      if( v[i]%2 == 0 ) sum+=v[i]; 
+    }
+  }
+  return sum;
+}
+int main(){ 
+  srand( time(0) );
+  int v[100], n;
+  n=insert("Enter n=");
+  insertVECTOR(v,n); 
+  showVECTOR(v,n);
+  int s = sumaVECTOR(v,n);
+  show("suma elem. vector = ", s );
+  return 0;
+}
+</pre>
+</p>
+  </div>
+</div> 
+
+<!-- The Modal 11 -->
+<div id="myModal_11" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>void insertMATRIX( int M[100][100] , int n ,int m ) {
+  for( int i=0; i&#60;n; i++) {
+    for( int j=0; j&#60;m ; j++){
+      M[i][j] = rand()%10;
+    }
+  }
+}
+void showMATRIX( int M[][100] , int n ,int m ) {
+  for( int i=0; i&#60;n; i++) {
+    for( int j=0; j&#60;m ; j++){
+      cout&#60;&#60;setw(3)&#60;&#60;M[i][j];
+    }
+    cout&#60;&#60;endl;
+  }
+}
+
+int main(){ 
+  srand( time(0) );
+  int M[100][100], n,m;
+  n = insert("enter nr. linii n="); 
+  m = insert(" Enter nr. coloane m=");
+  insertMATRIX(M,n,m);
+  showMATRIX(M,n,m); 
+  return 0;
+}
+</pre>
+</p>
+  </div>
+</div> 
+
+<!-- The Modal 12 -->
+<div id="myModal_12" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>int sumaMATRIX( int M[][100] , int n ,int m ){
+  int s=0;
+  for( int i=0; i&#60;n; i++) {
+    for( int j=0; j&#60;m ; j++){
+      s+=M[i][j];
+    }
+  }
+  return s;
+}
+int main(){ 
+  srand( time(0) );
+  int M[100][100], n,m;
+  n = insert("enter nr. linii n="); 
+  m = insert(" Enter nr. coloane m=");
+  insertMATRIX(M,n,m);
+  showMATRIX(M,n,m); 
+  int sM = sumaMATRIX(M,n,m);
+  show("suma elem. MATRIX = ", sM );
+  return 0;
+}
+</pre>
+</p>
+  </div>
+</div> 
+
+
+
+<!-- The Modal 13 -->
+<div id="myModal_13" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>void insertP( char mess[], int *x ) {
+  cout&#60;&#60;mess;
+  cin&#62;&#62;*x;
+}
+
+void showP( char mess[] , int *x ) {
+  cout&#60;&#60;mess&#60;&#60;*x&#60;&#60;endl;  
+}
+
+int main(){ 
+  srand( time(0) );
+     int *p = new int;
+     *p = insertP(" Enter p = ");
+     showP(" *p = ", p );
+  return 0;
+}
+</pre>
+</p>
+  </div>
+</div> 
+
+<!-- The Modal 14 -->
+<div id="myModal_14" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>void insertP( char mess[], int *x ) {
+  cout&#60;&#60;mess;
+  cin&#62;&#62;*x;
+}
+
+void showP( char mess[] , int *x ) {
+  cout&#60;&#60;mess&#60;&#60;*x&#60;&#60;endl;  
+}
+
+void calcP(int *a, int *b, int *c, int *R ) { 
+  *R = *a + *b - *c  ;
+}
+int main(){ 
+  int *a = new int;
+  int *b = new int;
+  int *c = new int;
+  int *R = new int;
+  insertP(" Enter a = ",a);
+  insertP(" Enter b = ",b);
+  insertP(" Enter c = ",c);
+  calcP(a,b,c,R) ; 
+  showP(" pointer a+b-c = ", R ); 
+  return 0;
+}
+</pre>
+</p>
+  </div>
+</div> 
+
+<!-- The Modal 15 -->
+<div id="myModal_15" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>void showS(char *mess, int value) {
+    cout&#60;&#60;mess&#60;&#60;value&#60;&#60;endl;
+}
+void showS(char *mess, double value) {
+    cout&#60;&#60;mess&#60;&#60;value&#60;&#60;endl;
+}
+void showS(char *mess, bool value) {
+    cout&#60;&#60;mess&#60;&#60;(value?"true":"false")&#60;&#60;endl;
+}
+void showS(char *mess, char value) {
+    cout&#60;&#60;mess&#60;&#60;value&#60;&#60;endl;
+}
+int main(){ 
+  showT("Valoare int = ",123);
+  showT("Valoare double = ",123.321);
+  showT("Valoare bool = ",true);
+  showT("Valoare char = ",'a');
+  return 0;
+}
+</pre>
+</p>
+  </div>
+</div> 
+
+<!-- The Modal 16 -->
+<div id="myModal_16" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>void showS(char *mess, int value) {
+    cout&#60;&#60;mess&#60;&#60;value&#60;&#60;endl;
+}
+void insertS(char *mess, int *x) { 
+   cout&#60;&#60;mess;
+   cin&#62;&#62;*x;
+}
+void insertS(char *mess, double *x) {
+   cout&#60;&#60;mess;
+   cin&#62;&#62;*x;
+}  
+void calcS(int a, int b, int c) {
+    showS(" int a+b-c = ", a+b-c);
+}
+void calcS(double a, double b, double c) {
+    showS(" double A+B-C = ", a+b-c );
+int main() { 
+  int a, b, c;
+  insertS("Enter a=",&a);
+  insertS("Enter b=",&b);
+  insertS("Enter c=",&c);
+  showS(" int a = ",a);
+  showS(" int b = ",b);
+  showS(" int c = ",c);
+  calcS(a,b,c);
+  double *A = new double;
+  double *B = new double;
+  double *C = new double;
+  insertS("Enter A=",A);
+  insertS("Enter B=",B);
+  insertS("Enter C=",C);
+  showS(" double A = ",*A);
+  showS(" double B = ",*B);
+  showS(" double C = ",*C);
+  calcS(*A,*B,*C);
+  return 0;
+}
+</pre>
+</p>
+  </div>
+</div> 
+
+<!-- The Modal 17 -->
+<div id="myModal_17" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>void insertVectorS(int *vi, int *n) {
+    for( int i=0 ; i&#60;*n; i++) *( vi + i ) = rand()%10;
+} 
+void showVectorS(int *vi, int *n) {
+    for( int i=0 ; i&#60;*n; i++) cout&#60;&#60;setw(3)&#60;&#60;*( vi + i );
+    cout&#60;&#60;endl;
+}
+void insertVectorS(double *vd, int *N) {
+    for( int i=0 ; i&#60;*N; i++)  *( vd + i ) = rand()%10*1.13;
+}
+void showVectorS(double *vd, int *N) {
+    for( int i=0 ; i&#60;*N; i++) cout&#60;&#60;setw(6)&#60;&#60;*( vd + i );
+    cout&#60;&#60;endl;
+}
+int main() { 
+  int *n = new int;
+  insertS(" Enter int n = ",n);
+  int *vi = new int[*n];
+  insertVectorS(vi,n);
+  showVectorS(vi,n);
+
+  int *N = new int;
+  insertS(" Enter double N = ",N);
+  double *vd = new double[*N];
+  insertVectorS(vd,N);
+  showVectorS(vd,N);
+  return 0;
+}
+</pre>
+</p>
+  </div>
+</div> 
+
+<!-- The Modal 18 -->
+<div id="myModal_18" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>void sumaVectorS(int *vi, int *n, int *si) {
+    for( int i=0 ; i&#60;*n; i++)  *si+=*( vi + i );
+}
+
+void sumaVectorS(double *vi, int *n, double *si) {
+    for( int i=0 ; i&#60;*n; i++)  *si+=*( vi + i );
+}
+int main() { 
+  int *n = new int;
+  insertS(" Enter int n = ",n);
+  int *vi = new int[*n];
+  insertVectorS(vi,n);
+  showVectorS(vi,n);
+
+  int *si = new int;
+  *si=0;
+  sumaVectorS(vi,n,si);
+  showS(" int SUMA = ",*si);
+  
+  double *sd = new double;
+  *sd=0;
+  sumaVectorS(vd,N,sd);  
+  showS(" double SUMA = ",*sd);
+return 0;
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 19 -->
+<div id="myModal_19" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>template &#60;typename T, typename TX &#62;
+void showT(TX *mess, T value) {
+    cout&#60;&#60;mess&#60;&#60;value&#60;&#60;endl;
+} 
+template &#60;typename T&#62;
+void insertT(char *mess, T *x) { 
+    cout&#60;&#60;mess;
+    cin&#62;&#62;*x;
+}
+template &#60;typename T&#62; 
+void calcT(T a, T b, T c) {
+T R = a+b-c;
+showT(" template  a+b-c=", R );
+}
+int main() { 
+  int a, b, c;
+  insertT("Enter a=",&a);
+  insertT ("Enter b=",&b);
+  insertT ("Enter c=",&c);
+
+  showT (" int a = ",a);
+  showT (" int b = ",b);
+  showT (" int c = ",c);
+
+  calcT (a,b,c);
+  double *A = new double;
+  double *B = new double;
+  double *C = new double;
+  insertT ("Enter A=",A);
+  insertT ("Enter B=",B);
+  insertT ("Enter C=",C);
+  showT (" double A = ",*A);
+  showT (" double B = ",*B);
+  showT (" double C = ",*C);
+  calcT (*A,*B,*C);
+  return 0;
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 20 -->
+<div id="myModal_20" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>template &#60;typename T&#62;
+void insertVectorTmanual( T *v , int *n) { 
+    for( int i=0 ; i&#60;*n; i++) insertT(" Enter value = ", v + i ) ;
+} 
+template &#60;typename T&#62;
+void insertVectorTrandom( T *v , int *n) {
+  switch( sizeof(T) )
+  {
+    case 2: for( int i=0 ; i&#60;*n; i++) *( v + i ) = rand()%5; break;
+    case 4: for( int i=0 ; i&#60;*n; i++) *( v + i ) = rand()%10; break;
+    case 8: for( int i=0 ; i&#60;*n; i++) *( v + i ) = rand()%10*1.13; break;
+    case 1: for( int i=0 ; i&#60;*n; i++) *( v + i ) = 'a'+rand()%26; break;
+  }  
+}
+template &#60;typename T&#62;
+void showVectorT(T *v, int *n)	 {
+    for( int i=0 ; i&#60;*n; i++) cout&#60;&#60;setw(6)&#60;&#60;*( v + i );
+    cout&#60;&#60;endl;
+}
+int main() { 
+  int *n = new int;
+  insertT("Enter n = ", n );
+  int *v=new int[*n];
+  insertVectorT(v,n);
+  showVectorT(v,n); 
+
+  double *v=new double[*n];
+  insertVectorT(v,n);
+  showVectorT(v,n);
+
+  char *v=new char[*n];
+  insertVectorT(v,n);
+  showVectorT(v,n);
+  return 0;
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 21 -->
+<div id="myModal_21" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>void insertVR(int v[], int n, int i ) {
+  if( i &#60; n ) {
+    v[i] = rand()%10; 
+    i++; 
+    insertVR(v,n,i); 
+  }
+}
+void showVR(int v[], int n, int i) {
+  if( i &#60; n ) { 
+  cout&#60;&#60;setw(3)&#60;&#60;v[i] ;
+  i++;
+  showVR(v,n,i); 
+  }
+}
+int main() { 
+  srand( time(0) );
+  int v[100];
+  int n=rand()%10+3;
+  insertVR(v,n,0);
+  showVR(v,n,0);
+  return 0; 
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 22 -->
+<div id="myModal_22" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre> int  max, 
+ int *pmax;
+ pmax = &max;
+
+*pmax=INT_MIN;
+ for(int i=0; i&#60;*pn; i++){
+   if(*pmax &#60; *(pv+i)) *pmax=*(pv+i);
+ }
+
+cout&#60;&#60;"\n max=" &#60;&#60;*pmax&#60;&#60;endl;
+cout&#60;&#60;endl;
+
+ int ss, 
+ int *pss;
+ pss = &ss;
+*pss=0; *pi=0;
+
+while(*(pv+ *pi) != *pmax){
+  *pss+=*(pv+ *pi); 
+   cout&#60;&#60;setw(3)&#60;&#60;*(pv+*pi); 
+  *pi+=1;
+}
+cout&#60;&#60;" suma pina la MAX = " &#60;&#60;*pss&#60;&#60;endl;
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 23 -->
+<div id="myModal_23" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>int  temp, 
+int *ptemp;
+ptemp = &temp;
+
+for(int i=0; i&#60;*pn/2; i++){
+  *ptemp = *(pv+i); 
+  *(pv+i) = *(pv+ *pn/2 + i);
+  *(pv+ *pn/2 + i) = *ptemp;
+}
+
+// Afișarea vectorului:
+
+cout&#60;&#60;" v :: ";
+
+for(int i=0; i&#60;*pn; i++){
+   cout&#60;&#60;setw(3)&#60;&#60;*(pv+i);
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 24 -->
+<div id="myModal_24" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>int X[100], Y[100],  NrX,      NrY;
+int  *pX,   *pY,   *pNrX,     *pNrY;
+    pX=X;   pY=Y; pNrX=&NrX; pNrY=&NrY;
+
+*pNrX=0;  *pNrY=0;
+for(int i=0; i&#60;*pn; i++){
+    if( *(pv+i) %2 == 0 ){
+       *(pX+*pNrX) = *(pv+i);
+       *pNrX+=1;
+    } else { *(pY+*pNrY) = *(pv+i);
+             *pNrY+=1;  }
+}
+cout&#60;&#60;"\n x :: ";
+for(int i=0; i&#60;*pNrX; i++){
+   cout&#60;&#60;setw(3)&#60;&#60;*(pX+i);
+}
+
+cout&#60;&#60;"\n y :: ";
+for(int i=0; i&#60;*pNrY; i++){
+   cout&#60;&#60;setw(3)&#60;&#60;*(pY+i);
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 25 -->
+<div id="myModal_25" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>int Cmax;
+int *pCmax;    
+pCmax = &Cmax;
+
+*Cmax = *pNrX &#62; *pNrY ? *pNrX : *pNrY;
+
+for(int i=0; i&#60;*pCmax; i++){
+  *ptemp = *(pX+i);
+  *(pX+i) = *(pY+i);
+  *(pY+i)= *ptemp;
+};
+
+  *temp = *pNrX;
+  *pNrX = *pNrY;
+  *pNrY = *temp;
+
+cout&#60;&#60;"\n x :: ";
+for(int i=0; i&#60;*pNrX; i++){
+   cout&#60;&#60;setw(3)&#60;&#60;*(pX+i);
+}
+
+cout&#60;&#60;"\n y :: ";
+for(int i=0; i&#60;*pNrY; i++){
+   cout&#60;&#60;setw(3)&#60;&#60;*(pY+i);
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 26 -->
+<div id="myModal_26" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>int X[100], n;
+int *pX,  *pn;
+    pX=X; pn=&n
+
+cout&#60;&#60;" Enter n=";
+cin&#62;&#62;*pn;
+
+for(int i=0; i&#60;*pn; i++){
+  *(pX+i) = rand()%10;
+}
+
+int  temp; 
+int *ptemp;
+ptemp = &temp;
+
+bool k;
+bool *pk;
+pk = &k;
+*pk = true;
+while (*pk ) {
+   *pk  = false;
+   for(int i=0; i&#60;*pn-1; i++){
+      if(*(pX+i) &#62; *(pX+i+1)){
+         *ptemp = *(pX+i);
+         *(pX+i) = *(pX+i+1);
+         *(pX+i+1) = *ptemp;
+         *pk = true;
+      }
+   }
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 27 -->
+<div id="myModal_27" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>int n, i_max=0;
+cin&#62;&#62;n;
+int a[100];
+for(int i=0;i&#60;n;i++){
+  cin&#62;&#62;a[i];
+}
+int max=a[0];
+for(int i=0;i&#60;n;i++){
+  if(max&#60;a[i]){
+    max=a[i]; i_max = i ;}
+}   
+a[i_max] = a[n-1]; 
+a[n-1] = max;
+for(int i=0;i&#60;n;i++){
+  cout &#60;&#60;a[i]&#60;&#60;" ";
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 28 -->
+<div id="myModal_28" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>int temp, A[100], B[100], AN, BN;
+do{
+  cout&#60;&#60;"\n Numar elemente vector A 1....100 n= ";
+  cin &#62;&#62; AN;
+} while (AN&#62;100 || AN&#60;1);
+do{
+  cout&#60;&#60;" Numar elemente vector B 1....100 n= ";
+  cin &#62;&#62; BN;
+} while (BN&#62;100 || BN&#60;1);
+cout&#60;&#60;"\n Introduceti "&#60;&#60;AN&#60;&#60;" elemente p-u vectorul A :";
+for(int i=0;i&#60;AN;i++){
+  cin &#62;&#62; A[i];
+};
+cout&#60;&#60;" Introduceti "&#60;&#60;BN&#60;&#60;" elemente p-u vectorul B :";
+for(int i=0;i&#60;BN;i++){
+  cin &#62;&#62; B[i];
+};
+int Cmax = AN &#62; BN ? AN : BN;
+for(int i=0; i&#60;Cmax; i++){
+  temp = A[i];
+  A[i] = B[i];
+  B[i]= temp;
+};
+temp = AN;
+AN = BN;
+BN = temp;
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 29 -->
+<div id="myModal_29" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>int max, k=0, poz, pozMAX[100] ; 
+bool XXX; 
+while( k &#60; x ) {
+  max = INT_MIN;
+  for(int i=0; i&#60;n ; i++) {
+    if( max &#60; v[i]){
+      XXX=true;
+      for(int j=0 ; j &#60; k; j++ ){
+        if( pozMAX[j] == i ){  XXX=false; break;   }
+      }
+      if( XXX ){
+        max = v[i];
+        poz = i; 
+      }
+    }
+  }
+  cout&#60;&#60;k+1&#60;&#60;" max = "&#60;&#60;max&#60;&#60;" poz = "&#60;&#60;poz&#60;&#60;endl;
+  pozMAX[k] = poz; 
+  k++; 
+}    
+cout&#60;&#60;"\n max v :: ";
+for( int i=0; i&#60;x; i++ ) cout&#60;&#60;setw(3)&#60;&#60;  v[ pozMAX[i] ]  ;
+
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 30 -->
+<div id="myModal_30" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>Varianta I
+	
+bool X = true;
+while (X) {
+  X = false;
+  for(int i=0; i&#60;n-1; i++){
+    if(v[i] &#62; v[i+1]) {
+      temp = v[i];
+      v[i] = v[i+1];
+      v[i+1] = temp;
+      X = true;
+    }
+  }  
+}
+Varianta II
+
+int i, j;
+for( i = 0; i &#60; n; i++){
+  for( j = i; j &#60; n-1; j++){
+    if(v[i] &#62; v[j+1]) {
+      temp = v[i];
+      v[i] = v[j+1];
+      v[j+1] = temp;
+    }
+  }  
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 31 -->
+<div id="myModal_31" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>bool X = true;
+while (X) {
+   X = false;
+   for(int i=0; i&#60;n/2-1; i++){
+      if(v[i] &#62; v[i+1]) {
+         temp = v[i];
+         v[i] = v[i+1];
+         v[i+1] = temp;
+         X = true;
+      }
+   }
+}
+bool X = true;
+while (X) {
+   X = false;
+   for(int i=n/2; i&#60;n-1; i++){
+      if(v[i] &#60; v[i+1]) {
+         temp = v[i];
+         v[i] = v[i+1];
+         v[i+1] = temp;
+         X = true;
+      }
+   }
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 32 -->
+<div id="myModal_32" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>bool X = true;
+while (X) {
+   X = false;
+   for(int i=0; i&#60;n-2; i+=2){
+      if(v[i] &#62; v[i+2]) {
+         temp = v[i];
+         v[i] = v[i+2];
+         v[i+2] = temp;
+         X = true;
+      }
+   }
+}
+bool X = true;
+while (X) {
+   X = false;
+   for(int i=1; i&#60;n-2; i+=2){
+      if(v[i] &#60; v[i+2]) {
+         temp = v[i];
+         v[i] = v[i+2];
+         v[i+2] = temp;
+         X = true;
+      }
+   }
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 33 -->
+<div id="myModal_33" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>p:nth-of-type(2) {
+  background: yellow;
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 34 -->
+<div id="myModal_34" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>p:nth-last-of-type(2) {
+  background: yellow;
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 35 -->
+<div id="myModal_35" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>p:only-child {
+  background: yellow;
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 36 -->
+<div id="myModal_36" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>p:only-of-type {
+  background: yellow;
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 37 -->
+<div id="myModal_37" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>/*html:*/
+
+&#60;p&#62;&#60;a href="#news1"&#62;Jump 1&#60;/a&#62;&#60;/p&#62;
+&#60;p&#62;&#60;a href="#news2"&#62;Jump 2&#60;/a>&#60;/p&#62;
+
+&#60;p id="news1"&#62;&#60;b>New content 1...&#60;/b>&#60;/p&#62;
+&#60;p id="news2"&#62;&#60;b>New content 2...&#60;/b>&#60;/p&#62;
+
+/*css:*/
+
+:target {
+  border: 2px solid #D4D4D4;
+  background-color: #e5eecc;
+}
+
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 38 -->
+<div id="myModal_38" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>/*html:*/
+
+&#60;div class="tab"&#62;
+  &#60;a href="#link1">Link 1&#60;/a&#62;   
+  &#60;a href="#link2">Link 2&#60;/a&#62;
+  &#60;a href="#link3">Link 3&#60;/a&#62;
+
+  &#60;div id="link1"&#62;
+    &#60;h3&#62;Content to Link 1&#60;/h3&#62;
+    &#60;p&#62;Hello World!&#60;/p&#62;
+  &#60;/div&#62;
+
+  &#60;div id="link2"&#62;
+    &#60;h3&#62;Content to Link 2&#60;/h3&#62;
+    &#60;h4&#62;Great success!&#60;/h4&#62;
+  &#60;/div&#62;
+
+  &#60;div id="link3"&#62;
+    &#60;h3&#62;Content to Link 3&#60;/h3&#62;
+	&#60;p&#62;Yeah!&#60;/p&#62;
+  &#60;/div&#62;
+&#60;/div&#62;
+
+/*css:*/
+
+.tab div {
+  display: none;
+}
+.tab div:target {
+  display: block;
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 39 -->
+<div id="myModal_39" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>/*html:*/
+
+&#60;body&#62;
+  &#60;table&#62;
+    &#60;tr&#62;&#60;td&#62;This is first row.&#60;/td&#62;&#60;/tr&#62;
+    &#60;tr&#62;&#60;td&#62;This is second row.&#60;/td&#62;&#60;/tr&#62;
+    &#60;tr>&#60;td&#62;This is third row.&#60;/td&#62;&#60;/tr&#62;
+    &#60;tr>&#60;td&#62;This is fourth row.&#60;/td&#62;&#60;/tr&#62;
+  &#60;/table&#62;
+&#60;/body&#62;
+
+/*css:*/
+
+tr:nth-child(2n) {      /*(2n+1)*/
+   background-color: yellow;
+ }
+
+или
+
+tr:nth-child(even) {     /*(odd)*/
+   background-color: yellow;
+ }
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 40 -->
+<div id="myModal_40" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>/*html:*/
+
+&#60;input type="checkbox"&#62;
+&#60;input type="checkbox"&#62;
+&#60;input type="checkbox" checked&#62;
+
+/*css:*/
+
+input[type="checkbox"]:not(:checked){
+      background-color: yellow;
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 41 -->
+<div id="myModal_41" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>/*html:*/
+	
+&#60;ul&#62;
+  &#60;li&#62; Соощение 1&#60;/li&#62;
+  &#60;li&#62; Соощение 2&#60;/li&#62;
+  &#60;li data-action="delete"&#62; Соощение 3&#60;/li&#62;
+  &#60;li data-action="edit  do-not-delete"&#62;4&#60;/li&#62;
+  &#60;li data-action="edit  delete"&#62;5&#60;/li&#62;
+&#60;/ul&#62;
+
+/*css:*/
+
+[data-action]:not([data-action~="delete"]) {
+   background-color: yellow;
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 42 -->
+<div id="myModal_42" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>/*html:*/
+
+&#60;h3&#62;Cooбщения&#60;/h3&#62;
+&#60;ul&#62;
+  &#60;li&#62; Соощение 1&#60;/li&#62;
+  &#60;li&#62; Соощение 2&#60;/li&#62;
+&#60;/ul&#62;
+&#60;ul&#62;
+  &#60;li&#62; Соощение 1&#60;/li&#62;
+  &#60;li&#62; Соощение 2&#60;/li&#62;
+&#60;/ul&#62;
+
+/*css:*/
+
+h3 + * {
+    background-color: yellow;
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 43 -->
+<div id="myModal_43" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>/*html:*/
+
+&#60;ul&#62;
+  &#60;li&#62;Маша&#60;/li&#62;
+  &#60;li&#62;Паша&#60;/li&#62;
+  &#60;li&#62;Даша&#60;/li&#62;
+  &#60;li&#62;Женя&#60;/li&#62;
+  &#60;li&#62;Саша&#60;/li&#62;
+  &#60;li&#62;Гоша&#60;/li&#62;
+&#60;/ul&#62;
+
+/*css:*/
+
+ul {
+    margin: 0;
+}
+li + li {
+    margin-top: 1.5em;
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<!-- The Modal 44 -->
+<div id="myModal_44" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><pre>/*html:*/
+
+&#60;ul&#62;
+  &#60;li&#62;Маша&#60;/li&#62;
+  &#60;li&#62;Паша&#60;/li&#62;
+  &#60;li&#62;Даша&#60;/li&#62;
+  &#60;li&#62;Женя&#60;/li&#62;
+  &#60;li&#62;Саша&#60;/li&#62;
+  &#60;li&#62;Гоша&#60;/li&#62;
+&#60;/ul&#62;
+
+/*css:*/
+
+ul {
+    margin: 0;
+}
+li:nth-child(odd):not(:first-child) {    /*3 5*/ 
+    margin-top: 1.5em;    
+}
+</pre>
+</p>
+  </div>
+</div>
+
+<div class="grid-container">
+  <div id="selecto1" class="grid-item">Să se calculeze a+b-c folosind funcțiile</div>
+  <div id="selecto2" class="grid-item">Să se calculeze a+b-c de n ori</div>
+  <div id="selecto3" class="grid-item">Să se calculeze suma răspunsurilor a+b-c ,n ori</div>  
+  <div id="selecto4" class="grid-item">a+b-c, n<br>suma R pare si suma R impare</div>
+  <div id="selecto5" class="grid-item">a+b-c, n<br>Să se contorizeze R impare</div>
+  <div id="selecto6" class="grid-item">a+b-c, n<br>Să se contorizeze răspunsurilor R ce intră în intervalul (-10;10)</div> 
+  <div id="selecto7" class="grid-item">a+b-c, n<br>suma R, dacă a impar 2...6, b par 3..8, c impar 0...3</div>
+</div>
+
+<h2>Funcții și tablouri:</h2>
+<div class="grid-container">
+  <div id="selecto8" class="grid-item">Să se creeze un vector din n elemente folosind funcțiile</div>
+  <div id="selecto9" class="grid-item">Să se calculeze suma elementelor vectorului folosind funcțiile</div> 
+  <div id="selecto10" class="grid-item">Să se calculeze suma elementelor pare și impare ale vectorului folosind funcțiile</div>
+  <div id="selecto11" class="grid-item">Să se creeze o matricie din n linii și m coloane folosind funcțiile</div>
+  <div id="selecto12" class="grid-item">DSă se calculeze suma elementelor matriciei folosind funcțiile</div>   
+ </div> 
+  
+ <h2>Funcții și pointeri:</h2> 
+  
+ <div class="grid-container"> 
+ 
+  <div id="selecto13" class="grid-item">Să se creeze un pointer folosind funcțiile</div>
+  <div id="selecto14" class="grid-item">Să se calculeze a+b-c prin pionteri folosind funcțiile</div>
+ </div> 
+  
+ <h2>Supraîncărcarea funcțiilor:</h2> 
+  
+ <div class="grid-container">  
+  <div id="selecto15" class="grid-item">Să se afișeze diferite tipuri de date</div>
+  <div id="selecto16" class="grid-item">Să se calculeze a + b –c pentru int și double</div>
+  <div id="selecto17" class="grid-item">Să se creeze un vector – int și double </div>
+  <div id="selecto18" class="grid-item">Să se calculeze suma elementelor</div>  
+</div> 
+  
+<h2>Funcții Template (șablon):</h2> 
+  
+<div class="grid-container">  
+  <div id="selecto19" class="grid-item">Să se calculeze a + b –c prin template</div>
+  <div id="selecto20" class="grid-item">Să se creeze un vector – prin template</div>
+
+</div> 
+  
+<h2>Functii recursive:</h2> 
+  
+<div class="grid-container">   
+  <div id="selecto21" class="grid-item">Să se creeze un vector din n elemente prin funcție recursivă</div> 
+
+
+</div> 
+  
+
+</div>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal_1");
+
+// Get the button that opens the modal
+//var btn = document.getElementById("myBtn");
+var selecto1 = document.getElementById("selecto1");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+//btn.onclick = function() {
+selecto1.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+var modal_2 = document.getElementById("myModal_2");
+var selecto_2 = document.getElementById("selecto2");
+var span = document.getElementsByClassName("close")[1];
+selecto_2.onclick = function() {
+  modal_2.style.display = "block";}
+span.onclick = function() {
+  modal_2.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_2) {
+    modal_2.style.display = "none";  }}
+
+var modal_3 = document.getElementById("myModal_3");
+var selecto_3 = document.getElementById("selecto3");
+var span = document.getElementsByClassName("close")[2];
+selecto_3.onclick = function() {
+  modal_3.style.display = "block";}
+span.onclick = function() {
+  modal_3.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_3) {
+    modal_3.style.display = "none";  }}
+	
+var modal_4 = document.getElementById("myModal_4");
+var selecto_4 = document.getElementById("selecto4");
+var span = document.getElementsByClassName("close")[3];
+selecto_4.onclick = function() {
+  modal_4.style.display = "block";}
+span.onclick = function() {
+  modal_4.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_4) {
+    modal_4.style.display = "none";  }}
+	
+var modal_5 = document.getElementById("myModal_5");
+var selecto_5 = document.getElementById("selecto5");
+var span = document.getElementsByClassName("close")[4];
+selecto_5.onclick = function() {
+  modal_5.style.display = "block";}
+span.onclick = function() {
+  modal_5.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_5) {
+    modal_5.style.display = "none";  }}	
+	
+var modal_6 = document.getElementById("myModal_6");
+var selecto_6 = document.getElementById("selecto6");
+var span = document.getElementsByClassName("close")[5];
+selecto_6.onclick = function() {
+  modal_6.style.display = "block";}
+span.onclick = function() {
+  modal_6.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_6) {
+    modal_6.style.display = "none";  }}		
+
+var modal_7 = document.getElementById("myModal_7");
+var selecto_7 = document.getElementById("selecto7");
+var span = document.getElementsByClassName("close")[6];
+selecto_7.onclick = function() {
+  modal_7.style.display = "block";}
+span.onclick = function() {
+  modal_7.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_7) {
+    modal_7.style.display = "none";  }}		
+
+var modal_8 = document.getElementById("myModal_8");
+var selecto_8 = document.getElementById("selecto8");
+var span = document.getElementsByClassName("close")[7];
+selecto_8.onclick = function() {
+  modal_8.style.display = "block";}
+span.onclick = function() {
+  modal_8.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_8) {
+    modal_8.style.display = "none";  }}	
+	
+var modal_9 = document.getElementById("myModal_9");
+var selecto_9 = document.getElementById("selecto9");
+var span = document.getElementsByClassName("close")[8];
+selecto_9.onclick = function() {
+  modal_9.style.display = "block";}
+span.onclick = function() {
+  modal_9.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_9) {
+    modal_9.style.display = "none";  }}	
+	
+var modal_10 = document.getElementById("myModal_10");
+var selecto_10 = document.getElementById("selecto10");
+var span = document.getElementsByClassName("close")[9];
+selecto_10.onclick = function() {
+  modal_10.style.display = "block";}
+span.onclick = function() {
+  modal_10.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_10) {
+    modal_10.style.display = "none";  }}	
+
+var modal_11 = document.getElementById("myModal_11");
+var selecto_11 = document.getElementById("selecto11");
+var span = document.getElementsByClassName("close")[10];
+selecto_11.onclick = function() {
+  modal_11.style.display = "block";}
+span.onclick = function() {
+  modal_11.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_11) {
+    modal_11.style.display = "none";  }}	
+	
+var modal_12 = document.getElementById("myModal_12");
+var selecto_12 = document.getElementById("selecto12");
+var span = document.getElementsByClassName("close")[11];
+selecto_12.onclick = function() {
+  modal_12.style.display = "block";}
+span.onclick = function() {
+  modal_12.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_12) {
+    modal_12.style.display = "none";  }}
+
+var modal_13 = document.getElementById("myModal_13");
+var selecto_13 = document.getElementById("selecto13");
+var span = document.getElementsByClassName("close")[12];
+selecto_13.onclick = function() {
+  modal_13.style.display = "block";}
+span.onclick = function() {
+  modal_13.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_13) {
+    modal_13.style.display = "none";  }}	
+	
+var modal_14 = document.getElementById("myModal_14");
+var selecto_14 = document.getElementById("selecto14");
+var span = document.getElementsByClassName("close")[13];
+selecto_14.onclick = function() {
+  modal_14.style.display = "block";}
+span.onclick = function() {
+  modal_14.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_14) {
+    modal_14.style.display = "none";  }}
+
+var modal_15 = document.getElementById("myModal_15");
+var selecto_15 = document.getElementById("selecto15");
+var span = document.getElementsByClassName("close")[14];
+selecto_15.onclick = function() {
+  modal_15.style.display = "block";}
+span.onclick = function() {
+  modal_15.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_15) {
+    modal_15.style.display = "none";  }}
+
+var modal_16 = document.getElementById("myModal_16");
+var selecto_16 = document.getElementById("selecto16");
+var span = document.getElementsByClassName("close")[15];
+selecto_16.onclick = function() {
+  modal_16.style.display = "block";}
+span.onclick = function() {
+  modal_16.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_16) {
+    modal_16.style.display = "none";  }}	
+	
+var modal_17 = document.getElementById("myModal_17");
+var selecto_17 = document.getElementById("selecto17");
+var span = document.getElementsByClassName("close")[16];
+selecto_17.onclick = function() {
+  modal_17.style.display = "block";}
+span.onclick = function() {
+  modal_17.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_17) {
+    modal_17.style.display = "none";  }}	
+	
+var modal_18 = document.getElementById("myModal_18");
+var selecto_18 = document.getElementById("selecto18");
+var span = document.getElementsByClassName("close")[17];
+selecto_18.onclick = function() {
+  modal_18.style.display = "block";}
+span.onclick = function() {
+  modal_18.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_18) {
+    modal_18.style.display = "none";  }}		
+	
+var modal_19 = document.getElementById("myModal_19");
+var selecto_19 = document.getElementById("selecto19");
+var span = document.getElementsByClassName("close")[18];
+selecto_19.onclick = function() {
+  modal_19.style.display = "block";}
+span.onclick = function() {
+  modal_19.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_19) {
+    modal_19.style.display = "none";  }}	
+
+var modal_20 = document.getElementById("myModal_20");
+var selecto_20 = document.getElementById("selecto20");
+var span = document.getElementsByClassName("close")[19];
+selecto_20.onclick = function() {
+  modal_20.style.display = "block";}
+span.onclick = function() {
+  modal_20.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_20) {
+    modal_20.style.display = "none";  }}
+	
+var modal_21 = document.getElementById("myModal_21");
+var selecto_21 = document.getElementById("selecto21");
+var span = document.getElementsByClassName("close")[20];
+selecto_21.onclick = function() {
+  modal_21.style.display = "block";}
+span.onclick = function() {
+  modal_21.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_21) {
+    modal_21.style.display = "none";  }}	
+
+var modal_22 = document.getElementById("myModal_22");
+var selecto_22 = document.getElementById("selecto22");
+var span = document.getElementsByClassName("close")[21];
+selecto_22.onclick = function() {
+  modal_22.style.display = "block";}
+span.onclick = function() {
+  modal_22.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_22) {
+    modal_22.style.display = "none";  }}
+	
+var modal_23 = document.getElementById("myModal_23");
+var selecto_23 = document.getElementById("selecto23");
+var span = document.getElementsByClassName("close")[22];
+selecto_23.onclick = function() {
+  modal_23.style.display = "block";}
+span.onclick = function() {
+  modal_23.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_23) {
+    modal_23.style.display = "none";  }}	
+	
+var modal_24 = document.getElementById("myModal_24");
+var selecto_24 = document.getElementById("selecto24");
+var span = document.getElementsByClassName("close")[23];
+selecto_24.onclick = function() {
+  modal_24.style.display = "block";}
+span.onclick = function() {
+  modal_24.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_24) {
+    modal_24.style.display = "none";  }}
+
+var modal_25 = document.getElementById("myModal_25");
+var selecto_25 = document.getElementById("selecto25");
+var span = document.getElementsByClassName("close")[24];
+selecto_25.onclick = function() {
+  modal_25.style.display = "block";}
+span.onclick = function() {
+  modal_25.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_25) {
+    modal_25.style.display = "none";  }}	
+	
+var modal_26 = document.getElementById("myModal_26");
+var selecto_26 = document.getElementById("selecto26");
+var span = document.getElementsByClassName("close")[25];
+selecto_26.onclick = function() {
+  modal_26.style.display = "block";}
+span.onclick = function() {
+  modal_26.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_26) {
+    modal_26.style.display = "none";  }}
+	
+var modal_27 = document.getElementById("myModal_27");
+var selecto_27 = document.getElementById("selecto27");
+var span = document.getElementsByClassName("close")[26];
+selecto_27.onclick = function() {
+  modal_27.style.display = "block";}
+span.onclick = function() {
+  modal_27.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_27) {
+    modal_27.style.display = "none";  }}
+	
+var modal_28 = document.getElementById("myModal_28");
+var selecto_28 = document.getElementById("selecto28");
+var span = document.getElementsByClassName("close")[27];
+selecto_28.onclick = function() {
+  modal_28.style.display = "block";}
+span.onclick = function() {
+  modal_28.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_28) {
+    modal_28.style.display = "none";  }}	
+	
+var modal_29 = document.getElementById("myModal_29");
+var selecto_29 = document.getElementById("selecto29");
+var span = document.getElementsByClassName("close")[28];
+selecto_29.onclick = function() {
+  modal_29.style.display = "block";}
+span.onclick = function() {
+  modal_29.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_29) {
+    modal_29.style.display = "none";  }}	
+	
+var modal_30 = document.getElementById("myModal_30");
+var selecto_30 = document.getElementById("selecto30");
+var span = document.getElementsByClassName("close")[29];
+selecto_30.onclick = function() {
+  modal_30.style.display = "block";}
+span.onclick = function() {
+  modal_30.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_30) {
+    modal_30.style.display = "none";  }}	
+	
+var modal_31 = document.getElementById("myModal_31");
+var selecto_31 = document.getElementById("selecto31");
+var span = document.getElementsByClassName("close")[30];
+selecto_31.onclick = function() {
+  modal_31.style.display = "block";}
+span.onclick = function() {
+  modal_31.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_31) {
+    modal_31.style.display = "none";  }}	
+	
+var modal_32 = document.getElementById("myModal_32");
+var selecto_32 = document.getElementById("selecto32");
+var span = document.getElementsByClassName("close")[31];
+selecto_32.onclick = function() {
+  modal_32.style.display = "block";}
+span.onclick = function() {
+  modal_32.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_32) {
+    modal_32.style.display = "none";  }}	
+	
+var modal_33 = document.getElementById("myModal_33");
+var selecto_33 = document.getElementById("selecto33");
+var span = document.getElementsByClassName("close")[32];
+selecto_33.onclick = function() {
+  modal_33.style.display = "block";}
+span.onclick = function() {
+  modal_33.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_33) {
+    modal_33.style.display = "none";  }}		
+	
+var modal_34 = document.getElementById("myModal_34");
+var selecto_34 = document.getElementById("selecto34");
+var span = document.getElementsByClassName("close")[33];
+selecto_34.onclick = function() {
+  modal_34.style.display = "block";}
+span.onclick = function() {
+  modal_34.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_34) {
+    modal_34.style.display = "none";  }}
+
+var modal_35 = document.getElementById("myModal_35");
+var selecto_35 = document.getElementById("selecto35");
+var span = document.getElementsByClassName("close")[34];
+selecto_35.onclick = function() {
+  modal_35.style.display = "block";}
+span.onclick = function() {
+  modal_35.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_35) {
+    modal_35.style.display = "none";  }}
+
+var modal_36 = document.getElementById("myModal_36");
+var selecto_36 = document.getElementById("selecto36");
+var span = document.getElementsByClassName("close")[35];
+selecto_36.onclick = function() {
+  modal_36.style.display = "block";}
+span.onclick = function() {
+  modal_36.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_36) {
+    modal_36.style.display = "none";  }}
+
+var modal_37 = document.getElementById("myModal_37");
+var selecto_37 = document.getElementById("selecto37");
+var span = document.getElementsByClassName("close")[36];
+selecto_37.onclick = function() {
+  modal_37.style.display = "block";}
+span.onclick = function() {
+  modal_37.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_37) {
+    modal_37.style.display = "none";  }}	
+	
+var modal_38 = document.getElementById("myModal_38");
+var selecto_38 = document.getElementById("selecto38");
+var span = document.getElementsByClassName("close")[37];
+selecto_38.onclick = function() {
+  modal_38.style.display = "block";}
+span.onclick = function() {
+  modal_38.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_38) {
+    modal_38.style.display = "none";  }}
+	
+var modal_39 = document.getElementById("myModal_39");
+var selecto_39 = document.getElementById("selecto39");
+var span = document.getElementsByClassName("close")[38];
+selecto_39.onclick = function() {
+  modal_39.style.display = "block";}
+span.onclick = function() {
+  modal_39.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_39) {
+    modal_39.style.display = "none";  }}
+
+var modal_40 = document.getElementById("myModal_40");
+var selecto_40 = document.getElementById("selecto40");
+var span = document.getElementsByClassName("close")[39];
+selecto_40.onclick = function() {
+  modal_40.style.display = "block";}
+span.onclick = function() {
+  modal_40.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_40) {
+    modal_40.style.display = "none";  }}	
+	
+var modal_41 = document.getElementById("myModal_41");
+var selecto_41 = document.getElementById("selecto41");
+var span = document.getElementsByClassName("close")[40];
+selecto_41.onclick = function() {
+  modal_41.style.display = "block";}
+span.onclick = function() {
+  modal_41.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_41) {
+    modal_41.style.display = "none";  }}	
+	
+var modal_42 = document.getElementById("myModal_42");
+var selecto_42 = document.getElementById("selecto42");
+var span = document.getElementsByClassName("close")[41];
+selecto_42.onclick = function() {
+  modal_42.style.display = "block";}
+span.onclick = function() {
+  modal_42.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_42) {
+    modal_42.style.display = "none";  }}	
+	
+var modal_43 = document.getElementById("myModal_43");
+var selecto_43 = document.getElementById("selecto43");
+var span = document.getElementsByClassName("close")[42];
+selecto_43.onclick = function() {
+  modal_43.style.display = "block";}
+span.onclick = function() {
+  modal_43.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_43) {
+    modal_43.style.display = "none";  }}	
+	
+var modal_44 = document.getElementById("myModal_44");
+var selecto_44 = document.getElementById("selecto44");
+var span = document.getElementsByClassName("close")[43];
+selecto_44.onclick = function() {
+  modal_44.style.display = "block";}
+span.onclick = function() {
+  modal_44.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal_44) {
+    modal_44.style.display = "none";  }}	
+</script>
+
+</body>
+</html>
