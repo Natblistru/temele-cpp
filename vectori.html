@@ -666,8 +666,24 @@ while (X) {
 <div id="myModal_33" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p><pre>p:nth-of-type(2) {
-  background: yellow;
+    <p><pre>#include &#60;iostream&#62;
+using namespace std;
+int main() {
+   int x[5];
+   int i, j, k, n=5;
+   cout &#60;&#60; "Input " &#60;&#60; n &#60;&#60; " numbers:" &#60;&#60; endl;
+   for(i = 0; i &#60; n; i++) cin &#62;&#62; x[i];
+   k = n;   // Вначале в массиве все элементы.
+                // Затем k = количество после удаления.
+   for(i = 0; i &#60; k; i++) {
+      if(x[i] &#60; 0)   {            
+         k--;             // уменьшаем количество
+         for(j = i; j &#60; k; j++) x[j] = x[j+1];// сдвиг влево
+         i--;         // Снова просматриваем i-й элемент
+      }
+   }
+   for(i = 0; i &#60; k; i++) cout &#60;&#60; x[i] &#60;&#60; endl;
+   return 0;
 }
 <pre>
 </p>
@@ -678,8 +694,24 @@ while (X) {
 <div id="myModal_34" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p><pre>p:nth-last-of-type(2) {
-  background: yellow;
+    <p><pre>#include &#60;iostream&#62;
+using namespace std;
+int main() {
+   int x[5];
+   int i, j, k, n=5, T=3;
+   cout &#60;&#60; "Input " &#60;&#60; n &#60;&#60; " numbers:" &#60;&#60; endl;
+   for(i = 0; i &#60; n; i++) cin &#62;&#62; x[i];
+   k = n;   // Вначале в массиве все элементы.
+                // Затем k = количество после удаления.
+   for(i = 0, t = 0; i &#60; k && t &#60; T; i++) {
+      if(x[i] &#60; 0)   {            
+         k--; t++;                      // уменьшаем количество
+         for(j = i; j &#60; k; j++) x[j] = x[j+1];// сдвиг влево
+         i--;         // Снова просматриваем i-й элемент
+      }
+   }
+   for(i = 0; i &#60; k; i++) cout &#60;&#60; x[i] &#60;&#60; endl;
+   return 0;
 }
 <pre>
 </p>
@@ -690,8 +722,23 @@ while (X) {
 <div id="myModal_35" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p><pre>p:only-child {
-  background: yellow;
+    <p><pre>#include &#60;iostream&#62;
+using namespace std;
+int main() {
+   int x[5];
+   int i, j, k, n=5;
+   cout &#60;&#60; "Input " &#60;&#60; n &#60;&#60; " numbers:" &#60;&#60; endl;
+   for(i = 0; i &#60; n; i++)  cin &#62;&#62; x[i];
+   k = n;   // Первоначально в массиве все элементы.
+            // Затем k = количество после удаления
+   for(i = k-1; i &#62;= 0; i--) {
+      if(x[i] &#60; 0) {
+         k--;        // уменьшаем количество
+         for(j = i; j &#60; k; j++) x[j] = x[j+1];// сдвиг
+      }
+   }
+   for(i = 0; i &#60; k; i++) cout &#60;&#60; x[i] &#60;&#60; endl;
+   return 0;
 }
 <pre>
 </p>
@@ -702,8 +749,23 @@ while (X) {
 <div id="myModal_36" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p><pre>p:only-of-type {
-  background: yellow;
+    <p><pre>#include &#60;iostream&#62;
+using namespace std;
+int main() {
+   int x[5];
+   int i, j, k, n=5, T=2;
+   cout &#60;&#60; "Input " &#60;&#60; n &#60;&#60; " numbers:" &#60;&#60; endl;
+   for(i = 0; i &#60; n; i++)  cin &#62;&#62; x[i];
+   k = n;   // Первоначально в массиве все элементы.
+            // Затем k = количество после удаления
+   for(i = k-1, t = 0; i &#62;0 && t &#60; T; i--) {
+      if(x[i] &#60; 0) {
+         k--; t++;       // уменьшаем количество
+         for(j = i; j &#60; k; j++) x[j] = x[j+1];// сдвиг
+      }
+   }
+   for(i = 0; i &#60; k; i++) cout &#60;&#60; x[i] &#60;&#60; endl;
+   return 0;
 }
 <pre>
 </p>
@@ -714,21 +776,25 @@ while (X) {
 <div id="myModal_37" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p><pre>/*html:*/
-
-&#60;p&#62;&#60;a href="#news1"&#62;Jump 1&#60;/a&#62;&#60;/p&#62;
-&#60;p&#62;&#60;a href="#news2"&#62;Jump 2&#60;/a>&#60;/p&#62;
-
-&#60;p id="news1"&#62;&#60;b>New content 1...&#60;/b>&#60;/p&#62;
-&#60;p id="news2"&#62;&#60;b>New content 2...&#60;/b>&#60;/p&#62;
-
-/*css:*/
-
-:target {
-  border: 2px solid #D4D4D4;
-  background-color: #e5eecc;
+    <p><pre>#include &#60;iostream&#62;
+using namespace std;
+int main() {
+   int n = 5;
+   int x[n];
+   int i, j, k;
+   cout &#60;&#60; "Input " &#60;&#60; n &#60;&#60; " numbers:" &#60;&#60; endl;
+   for(i = 0; i &#60; n; i++) cin &#62;&#62; x[i];
+   k = 0;   // Вначале это позиция, в которую от-правляем оставшийся элемент.
+            // Затем k будет означать количество оставшихся после удаления элементов.
+   for(i = 0; i &#60; n; i++) {
+      if(x[i] &#62;=0) { // условие на оставление в мacсиве
+         x[k] = x[i];
+         k++;
+      }
+   }
+   for(i = 0; i &#60; k; i++)  cout &#60;&#60; x[i] &#60;&#60; endl;
+   return 0;
 }
-
 <pre>
 </p>
   </div>
@@ -738,36 +804,26 @@ while (X) {
 <div id="myModal_38" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p><pre>/*html:*/
-
-&#60;div class="tab"&#62;
-  &#60;a href="#link1">Link 1&#60;/a&#62;   
-  &#60;a href="#link2">Link 2&#60;/a&#62;
-  &#60;a href="#link3">Link 3&#60;/a&#62;
-
-  &#60;div id="link1"&#62;
-    &#60;h3&#62;Content to Link 1&#60;/h3&#62;
-    &#60;p&#62;Hello World!&#60;/p&#62;
-  &#60;/div&#62;
-
-  &#60;div id="link2"&#62;
-    &#60;h3&#62;Content to Link 2&#60;/h3&#62;
-    &#60;h4&#62;Great success!&#60;/h4&#62;
-  &#60;/div&#62;
-
-  &#60;div id="link3"&#62;
-    &#60;h3&#62;Content to Link 3&#60;/h3&#62;
-	&#60;p&#62;Yeah!&#60;/p&#62;
-  &#60;/div&#62;
-&#60;/div&#62;
-
-/*css:*/
-
-.tab div {
-  display: none;
-}
-.tab div:target {
-  display: block;
+    <p><pre>#include &#60;iostream&#62;
+using namespace std;
+int main() {
+   int i, j, k, n = 5;
+   int x[10]; //2*n
+   cout &#60;&#60; "Input " &#60;&#60; n &#60;&#60; " numbers:" &#60;&#60; endl;
+   for(i = 0; i &#60; n; i++) cin &#62;&#62; x[i];
+   k = n;   // Первоначально в массиве все элементы.
+            // Затем k = количество после добавления.
+   for(i = 0; i &#60; k; i++) {
+      if(x[i] &#62; 0) {  // условие на вставку элемента 
+         for(j = k; j &#62; i; j--) // сдвиг в право
+            x[j] = x[j-1];
+            x[i] = 0;   // вставка нового элемента
+            k++;        // увеличиваем количество
+            i++;     // обход уже обработанного элемента
+      }
+   }
+   for(i = 0; i &#60; k; i++) cout &#60;&#60; x[i] &#60;&#60; endl;
+   return 0;
 }
 <pre>
 </p>
@@ -984,6 +1040,18 @@ li:nth-child(odd):not(:first-child) {    /*3 5*/
   <div id="selecto30" class="grid-item">Algoritm de sortare (crescător)</div>
   <div id="selecto31" class="grid-item">Să se aranjeze I jumătate – crescător, II jumătate – descrescător </div>
   <div id="selecto32" class="grid-item">Să se aranjeze crescător elementele de pe pozițiile pare, descrescător – elementele de pe pozițiile impare</div>
+</div> 
+
+ <h2>Vectori. Adaugare si stergere elemente:</h2> 
+  
+ <div class="grid-container"> 
+ 
+ <div id="selecto33" class="grid-item">Din vectorul de n numere întregi de eliminat numerele < 0. <em>De la stinga la dreapta.</em></div>
+ <div id="selecto34" class="grid-item">Din vectorul de n numere întregi de eliminat numerele <b>primele 3 </b>numere negative. </div>
+ <div id="selecto35" class="grid-item">Din vectorul de n numere întregi de eliminat numerele < 0. <em>De la dreapta la stinga.</em></div>
+ <div id="selecto36" class="grid-item">Din vectorul de n numere întregi de eliminat numerele <b>ultimele 2 </b>numere negative.</div>
+ <div id="selecto37" class="grid-item">Dintr-un vector <b>mare</b> de n numere întregi de eliminat numerele negative.</div>
+ <div id="selecto38" class="grid-item">La vectorul cu n numere întregi <b>de dăugat 0 </b>în fața fiecărui număr pozitiv.</div>
 </div> 
   
 <script>
